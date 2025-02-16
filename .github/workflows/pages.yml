@@ -3,7 +3,7 @@ name: Deploy GitHub Pages
 on:
   push:
     branches:
-      - main  # Change this if using a different branch
+      - main  # Change if using a different branch
 
 jobs:
   deploy:
@@ -16,10 +16,10 @@ jobs:
         uses: actions/configure-pages@v2
 
       - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v2
-
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .  # Upload everything in the repo
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
+
